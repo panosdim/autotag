@@ -39,8 +39,6 @@ int main(int argc, char *argv[]) {
 
     char buffer[EVENT_BUF_LEN];
     string current_dir, new_dir;
-    int total_file_events = 0;
-    int total_dir_events = 0;
 
     // Call sig_callback if user hits ctrl-c
     signal(SIGINT, sig_callback);
@@ -105,21 +103,15 @@ int main(int argc, char *argv[]) {
                         new_dir = current_dir + "/" + event->name;
                         wd = inotify_add_watch(fd, new_dir.c_str(), WATCH_FLAGS);
                         watch.insert(event->wd, event->name, wd);
-                        total_dir_events++;
-                        printf("New directory %s created.\n", new_dir.c_str());
                     } else {
-                        total_file_events++;
                         printf("New file %s/%s created.\n", current_dir.c_str(), event->name);
                     }
                 } else if (event->mask & IN_DELETE) {
                     if (event->mask & IN_ISDIR) {
                         new_dir = watch.erase(event->wd, event->name, &wd);
                         inotify_rm_watch(fd, wd);
-                        total_dir_events--;
-                        printf("Directory %s deleted.\n", new_dir.c_str());
                     } else {
                         current_dir = watch.get(event->wd);
-                        total_file_events--;
                         printf("File %s/%s deleted.\n", current_dir.c_str(), event->name);
                     }
                 }
@@ -130,7 +122,6 @@ int main(int argc, char *argv[]) {
 
     // Cleanup
     printf("cleaning up\n");
-    cout << "total dir events = " << total_dir_events << ", total file events = " << total_file_events << endl;
     watch.cleanup(fd);
     close(fd);
     fflush(stdout);
