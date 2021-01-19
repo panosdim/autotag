@@ -1,15 +1,16 @@
-#include <stdio.h>
-#include <signal.h>
-#include <limits.h>
+#include <cstdio>
+#include <csignal>
+#include <climits>
 #include <sys/inotify.h>
-#include <fcntl.h>
 #include <iostream>
 #include <unistd.h>
 #include <string>
+#include <filesystem>
 #include "Watch.h"
 
 using std::cout;
 using std::endl;
+namespace fs = std::filesystem;
 
 #define EVENT_SIZE (sizeof(struct inotify_event))
 #define EVENT_BUF_LEN (1024 * (EVENT_SIZE + NAME_MAX + 1))
@@ -18,7 +19,7 @@ using std::endl;
 // Keep going  while run == true, or, in other words, until user hits ctrl-c
 static bool run = true;
 
-void sig_callback(int sig) {
+void sig_callback([[maybe_unused]] int sig) {
     run = false;
 }
 
@@ -74,7 +75,7 @@ int main(int argc, char *argv[]) {
         // select waits until inotify has 1 or more events.
         // select syntax is beyond the scope of this sample but, don't worry, the fd+1 is correct:
         // select needs the the highest fd (+1) as the first parameter.
-        select(fd + 1, &watch_set, NULL, NULL, NULL);
+        select(fd + 1, &watch_set, nullptr, nullptr, nullptr);
 
         // Read event(s) from non-blocking inotify fd (non-blocking specified in inotify_init1 above).
         int length = read(fd, buffer, EVENT_BUF_LEN);
@@ -84,19 +85,8 @@ int main(int argc, char *argv[]) {
 
         // Loop through event buffer
         for (int i = 0; i < length;) {
-            struct inotify_event *event = (struct inotify_event *) &buffer[i];
-            // Never actually seen this
-            if (event->wd == -1) {
-                printf("Overflow\n");
-            }
-            // Never seen this either
-            if (event->mask & IN_Q_OVERFLOW) {
-                printf("Overflow\n");
-            }
+            auto *event = (struct inotify_event *) &buffer[i];
             if (event->len) {
-                if (event->mask & IN_IGNORED) {
-                    printf("IN_IGNORED\n");
-                }
                 if (event->mask & IN_CREATE) {
                     current_dir = watch.get(event->wd);
                     if (event->mask & IN_ISDIR) {
@@ -104,24 +94,27 @@ int main(int argc, char *argv[]) {
                         wd = inotify_add_watch(fd, new_dir.c_str(), WATCH_FLAGS);
                         watch.insert(event->wd, event->name, wd);
                     } else {
-                        printf("New file %s/%s created.\n", current_dir.c_str(), event->name);
+                        fs::path new_file(current_dir);
+                        new_file /= event->name;
+                        if (new_file.extension() != ".mp4") {
+                            cout << "Not an MP4 file." << endl;
+                        } else {
+                            cout << "Great an MP4 file." << endl;
+                        }
                     }
                 } else if (event->mask & IN_DELETE) {
                     if (event->mask & IN_ISDIR) {
-                        new_dir = watch.erase(event->wd, event->name, &wd);
+                        watch.erase(event->wd, event->name, &wd);
                         inotify_rm_watch(fd, wd);
-                    } else {
-                        current_dir = watch.get(event->wd);
-                        printf("File %s/%s deleted.\n", current_dir.c_str(), event->name);
                     }
                 }
             }
-            i += EVENT_SIZE + event->len;
+            i += EVENT_SIZE + event->len; // NOLINT(cppcoreguidelines-narrowing-conversions)
         }
     }
 
     // Cleanup
-    printf("cleaning up\n");
+    cout << "Cleaning Up" << endl;
     watch.cleanup(fd);
     close(fd);
     fflush(stdout);

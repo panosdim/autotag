@@ -27,7 +27,7 @@ string Watch::get(int wd) {
 }
 
 void Watch::cleanup(int fd) {
-    for (map<int, wd_elem>::iterator wi = watch.begin(); wi != watch.end(); wi++) {
+    for (auto wi = watch.begin(); wi != watch.end(); wi++) {
         inotify_rm_watch(fd, wi->first);
         watch.erase(wi);
     }

@@ -20,7 +20,7 @@ class Watch {
         string name;
 
         bool operator()(const wd_elem &l, const wd_elem &r) const {
-            return l.pd < r.pd ? true : l.pd == r.pd && l.name < r.name ? true : false;
+            return l.pd < r.pd || l.pd == r.pd && l.name < r.name;
         }
     };
 
