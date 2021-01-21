@@ -126,7 +126,9 @@ int main(int argc, char *argv[]) {
                             if (cover.empty()) {
                                 LOG(ERROR) << "Cover file not found";
                             } else {
-                                save_mp4_cover(cover, movieInfo);
+                                if (movieInfo.fileType == MP4) {
+                                    save_mp4_cover(cover, movieInfo);
+                                }
                             }
                         }
                     }

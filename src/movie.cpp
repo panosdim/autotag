@@ -3,8 +3,8 @@
 #include "AtomicParsley/AP_commons.h"
 #include "AtomicParsley/AtomicParsley.h"
 #include "AtomicParsley/AP_AtomExtracts.h"
-#include "AtomicParsley/AP_iconv.h"                 /* for xmlInitEndianDetection used in endian utf16 conversion */
-#include "AtomicParsley/AtomicParsley_genres.h"     //for stik comparison function
+#include "AtomicParsley/AP_iconv.h"
+#include "AtomicParsley/AtomicParsley_genres.h"
 #include "AtomicParsley/APar_uuid.h"
 #include <glog/logging.h>
 #include <cstdio>
@@ -28,10 +28,10 @@ bool extract_movie_info(const std::filesystem::path &movieFile, Movie &movieInfo
     return false;
 }
 
-void save_mp4_cover(const string cover, const Movie &movieInfo) {
+void save_mp4_cover(const string &cover, const Movie &movieInfo) {
     char *env_PicOptions = getenv("PIC_OPTIONS");
     APar_ScanAtoms(movieInfo.path.c_str());
-    if (!APar_assert(metadata_style == ITUNES_STYLE, 1, "coverart")) {
+    if (!APar_assert(metadata_style == ITUNES_STYLE, 1, (char *) "coverart")) {
         PLOG(ERROR) << "No metadata iTunes style found";
     }
 
