@@ -14,7 +14,7 @@ class TMDB {
 public:
     explicit TMDB(const string &token);
 
-    FILE *downloadCover(const MovieInfo &movieInfo);
+    string downloadCover(const Movie &movieInfo);
 };
 
 

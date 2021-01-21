@@ -117,12 +117,17 @@ int main(int argc, char *argv[]) {
                     } else {
                         fs::path new_file(current_dir);
                         new_file /= event->name;
-                        MovieInfo movieInfo;
+                        Movie movieInfo;
                         if (extract_movie_info(new_file, movieInfo)) {
                             LOG(INFO) << "New movie found in " << movieInfo.path << " with title " << movieInfo.title
                                       << " and released at "
                                       << movieInfo.releaseYear;
-                            tmdb.downloadCover(movieInfo);
+                            string cover = tmdb.downloadCover(movieInfo);
+                            if (cover.empty()) {
+                                LOG(ERROR) << "Cover file not found";
+                            } else {
+                                save_mp4_cover(cover, movieInfo);
+                            }
                         }
                     }
                 } else if (event->mask & IN_DELETE) {

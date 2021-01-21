@@ -10,13 +10,15 @@ enum FileType {
     MKV, MP4
 };
 
-struct MovieInfo {
+struct Movie {
     string title;
     string releaseYear;
     string path;
     FileType fileType;
 };
 
-bool extract_movie_info(const std::filesystem::path &path, MovieInfo &movieInfo);
+bool extract_movie_info(const std::filesystem::path &path, Movie &movieInfo);
+
+void save_mp4_cover(const string cover, const Movie &movieInfo);
 
 #endif //AUTOTAG_MOVIE_H

@@ -9,9 +9,11 @@ add_subdirectory(libs/restclient-cpp-0.5.2)
 set(JSON_BuildTests OFF CACHE INTERNAL "")
 add_subdirectory(libs/json-3.9.1)
 
+AUX_SOURCE_DIRECTORY(src/AtomicParsley AtomicParsley)
+
 configure_file(${CMAKE_SOURCE_DIR}/config.ini ${CMAKE_BINARY_DIR} COPYONLY)
 
-add_executable(autotag src/main.cpp src/Watch.cpp src/Watch.h src/movie.cpp src/movie.h src/TMDB.cpp src/TMDB.h)
+add_executable(autotag src/main.cpp src/Watch.cpp src/Watch.h src/movie.cpp src/movie.h src/TMDB.cpp src/TMDB.h ${AtomicParsley})
 target_include_directories(autotag PUBLIC ${CMAKE_SOURCE_DIR}/libs/simpleini-4.17)
 target_link_libraries(autotag PRIVATE glog::glog restclient-cpp nlohmann_json::nlohmann_json)
 

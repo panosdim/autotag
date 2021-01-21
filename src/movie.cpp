@@ -1,7 +1,16 @@
 #include "movie.h"
 #include <regex>
+#include "AtomicParsley/AP_commons.h"
+#include "AtomicParsley/AtomicParsley.h"
+#include "AtomicParsley/AP_AtomExtracts.h"
+#include "AtomicParsley/AP_iconv.h"                 /* for xmlInitEndianDetection used in endian utf16 conversion */
+#include "AtomicParsley/AtomicParsley_genres.h"     //for stik comparison function
+#include "AtomicParsley/APar_uuid.h"
+#include <glog/logging.h>
+#include <cstdio>
 
-bool extract_movie_info(const std::filesystem::path &movieFile, MovieInfo &movieInfo) {
+
+bool extract_movie_info(const std::filesystem::path &movieFile, Movie &movieInfo) {
     std::regex movieRegex(R"(([ .\w']+?)\W(\d{4})\W?.*)");
     std::smatch movieResult;
     if (movieFile.extension() == ".mp4" || movieFile.extension() == ".mkv") {
@@ -17,4 +26,38 @@ bool extract_movie_info(const std::filesystem::path &movieFile, MovieInfo &movie
     }
 
     return false;
+}
+
+void save_mp4_cover(const string cover, const Movie &movieInfo) {
+    char *env_PicOptions = getenv("PIC_OPTIONS");
+    APar_ScanAtoms(movieInfo.path.c_str());
+    if (!APar_assert(metadata_style == ITUNES_STYLE, 1, "coverart")) {
+        PLOG(ERROR) << "No metadata iTunes style found";
+    }
+
+    APar_MetaData_atomArtwork_Set(cover.c_str(), env_PicOptions);
+    if (modified_atoms) {
+        APar_DetermineAtomLengths();
+        openSomeFile(movieInfo.path.c_str(), true);
+        string output_file = movieInfo.path + "-temp";
+        APar_WriteFile(movieInfo.path.c_str(), output_file.c_str(), false);
+
+        // Replace original file
+        int status = remove(movieInfo.path.c_str());
+        if (status != 0) {
+            LOG(ERROR) << "Error deleting original file! " << movieInfo.path;
+        }
+
+        status = rename(output_file.c_str(), movieInfo.path.c_str());
+        if (status != 0) {
+            LOG(ERROR) << "Error renaming temp file! " << output_file;
+        }
+
+        // Delete cover
+        status = remove(cover.c_str());
+        if (status != 0) {
+            LOG(ERROR) << "Cover File was not deleted!";
+        }
+    }
+    APar_FreeMemory();
 }

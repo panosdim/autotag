@@ -28,7 +28,7 @@ TMDB::TMDB(const string &token) {
     }
 }
 
-FILE *TMDB::downloadCover(const MovieInfo &movieInfo) {
+string TMDB::downloadCover(const Movie &movieInfo) {
     CURL *curl;
     CURLcode res;
     string query = "&query=";
@@ -67,7 +67,7 @@ FILE *TMDB::downloadCover(const MovieInfo &movieInfo) {
             // Clean up the resources
             curl_easy_cleanup(curl);
 
-            return fp;
+            return "/tmp/cover.jpg";
         } else {
             // Clean up the resources
             curl_easy_cleanup(curl);
@@ -81,5 +81,5 @@ FILE *TMDB::downloadCover(const MovieInfo &movieInfo) {
 
     // Clean up the resources
     curl_easy_cleanup(curl);
-    return nullptr;
+    return "";
 }
