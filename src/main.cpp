@@ -12,7 +12,6 @@
 #include "SimpleIni.h"
 #include "TMDB.h"
 
-
 using std::cout;
 using std::endl;
 namespace fs = std::filesystem;
@@ -43,7 +42,8 @@ int main(int argc, char *argv[]) {
 
     SI_Error rc = ini.LoadFile("config.ini");
     if (rc < 0) {
-        PLOG(ERROR) << "Can't open config.ini file.";
+        LOG(ERROR) << "Can't open config.ini file.";
+        return -1;
     }
 
     auto token = ini.GetValue("TMDB", "apiKey", "NOT_FOUND");
@@ -90,6 +90,8 @@ int main(int argc, char *argv[]) {
     // add wd and directory name to Watch map
     watch.insert(-1, root, wd);
 
+    string processed_file;
+
     // Continue until run == false. See signal and sig_callback above.
     while (run) {
         // select waits until inotify has 1 or more events.
@@ -118,16 +120,30 @@ int main(int argc, char *argv[]) {
                         fs::path new_file(current_dir);
                         new_file /= event->name;
                         Movie movieInfo;
+
                         if (extract_movie_info(new_file, movieInfo)) {
-                            LOG(INFO) << "New movie found in " << movieInfo.path << " with title " << movieInfo.title
-                                      << " and released at "
-                                      << movieInfo.releaseYear;
-                            string cover = tmdb.downloadCover(movieInfo);
-                            if (cover.empty()) {
-                                LOG(ERROR) << "Cover file not found";
-                            } else {
-                                if (movieInfo.fileType == MP4) {
-                                    save_mp4_cover(cover, movieInfo);
+                            if (processed_file != new_file) {
+                                processed_file = new_file;
+                                LOG(INFO) << "New movie found in " << movieInfo.path << " with title "
+                                          << movieInfo.title
+                                          << " and released at "
+                                          << movieInfo.releaseYear;
+                                string cover = tmdb.downloadCover(movieInfo);
+                                if (cover.empty()) {
+                                    LOG(ERROR) << "Cover file not found";
+                                } else {
+                                    switch (movieInfo.fileType) {
+                                        case MP4:
+                                            save_mp4_cover(cover, movieInfo);
+                                        case MKV:
+                                            save_mkv_cover(cover, movieInfo);
+                                    }
+
+                                    // Delete cover
+                                    int status = remove(cover.c_str());
+                                    if (status != 0) {
+                                        LOG(ERROR) << "Cover File was not deleted!";
+                                    }
                                 }
                             }
                         }

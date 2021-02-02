@@ -15,7 +15,7 @@
     cannot, write to the Free Software Foundation, 59 Temple Place
     Suite 330, Boston, MA 02111-1307, USA.  Or www.fsf.org
 
-    Copyright ©2005-2006 puck_lock
+    Copyright ï¿½2005-2006 puck_lock
 */
 //==================================================================//
 
@@ -655,7 +655,7 @@ utf8_length
 	char_limit - either 0 (count all characters) or non-zero (limit utf8 to that character count)
 
     Because of the lovely way utf8 is aligned, test only the first byte in each. If char_limit is 0, return the number of CHARACTERS in the string, if the
-		char_limit is not zero (the char_limit will equal utf_string_leghth because of the break), so change gears, save space and just return the byte_count.
+		char_limit is not zero (the char_limit will equal utf_string_leghth because of the break), so change gears, save_mkv_cover space and just return the byte_count.
 ----------------------*/
 #include <stdio.h>
 unsigned int utf8_length(const char *in_string, unsigned int char_limit) {

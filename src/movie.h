@@ -21,4 +21,6 @@ bool extract_movie_info(const std::filesystem::path &path, Movie &movieInfo);
 
 void save_mp4_cover(const string &cover, const Movie &movieInfo);
 
+void save_mkv_cover(const string &cover, const Movie &movieInfo);
+
 #endif //AUTOTAG_MOVIE_H

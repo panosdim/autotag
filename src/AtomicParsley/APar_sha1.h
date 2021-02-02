@@ -29,7 +29,7 @@
 
 typedef uint32_t md5_uint32;
 
-/* Structure to save state of computation between the single steps.  */
+/* Structure to save_mkv_cover state of computation between the single steps.  */
 struct sha1_ctx
 {
   md5_uint32 A;

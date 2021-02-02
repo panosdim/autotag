@@ -37,7 +37,7 @@ endif ()
 
 find_package(Threads REQUIRED)
 find_package(CURL REQUIRED)
-find_package(jsoncpp)
+find_package(jsoncpp QUIET)
 
 option(BUILD_SHARED_LIBS "Build shared library." YES)
 if (COMPILE_TYPE STREQUAL "SHARED")

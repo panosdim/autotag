@@ -24,7 +24,7 @@ TMDB::TMDB(const string &token) {
         string secureBaseUrl = response["images"]["secure_base_url"];
         imageBaseUrl = secureBaseUrl + posterSize;
     } else {
-        PLOG(ERROR) << "Can't retrieve configuration from TMDB." << r.code;
+        LOG(ERROR) << "Can't retrieve configuration from TMDB." << r.code;
     }
 }
 
@@ -36,7 +36,7 @@ string TMDB::downloadCover(const Movie &movieInfo) {
     if (curl) {
         query += curl_easy_escape(curl, movieInfo.title.c_str(), movieInfo.title.length());
     } else {
-        PLOG(ERROR) << "Can't initialize cURL";
+        LOG(ERROR) << "Can't initialize cURL";
     }
 
     string year = "&year=" + movieInfo.releaseYear;
@@ -49,7 +49,7 @@ string TMDB::downloadCover(const Movie &movieInfo) {
 
             FILE *fp = fopen("/tmp/cover.jpg", "wb");
             if (!fp) {
-                PLOG(ERROR) << "Can't open file to save cover image.";
+                LOG(ERROR) << "Can't open file to save cover image.";
             }
 
             curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, NULL);
@@ -58,8 +58,17 @@ string TMDB::downloadCover(const Movie &movieInfo) {
             curl_easy_setopt(curl, CURLOPT_URL, imageUrl.c_str());
             // Grab image
             res = curl_easy_perform(curl);
-            if (res)
-                PLOG(ERROR) << "Cannot grab the image!";
+            if (res) {
+                LOG(ERROR) << "Cannot grab the image!";
+                // Close the file
+                fclose(fp);
+
+                // Clean up the resources
+                curl_easy_cleanup(curl);
+
+                return "";
+            }
+
 
             // Close the file
             fclose(fp);
@@ -69,17 +78,15 @@ string TMDB::downloadCover(const Movie &movieInfo) {
 
             return "/tmp/cover.jpg";
         } else {
-            // Clean up the resources
-            curl_easy_cleanup(curl);
-            PLOG(ERROR) << "No movie found in TMDB.";
+            LOG(ERROR) << "No movie found in TMDB.";
         }
     } else {
-        // Clean up the resources
-        curl_easy_cleanup(curl);
-        PLOG(ERROR) << "Can't search movie in TMDB." << r.code;
+        LOG(ERROR) << "Can't search movie in TMDB." << r.code;
     }
 
     // Clean up the resources
-    curl_easy_cleanup(curl);
+    if (curl) {
+        curl_easy_cleanup(curl);
+    }
     return "";
 }
