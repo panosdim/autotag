@@ -13,8 +13,8 @@ $ autotag "/mnt/Movies"
 
 ## Installation
 
-In order to install first you need to build it with `$ go build -o autotag` and then install it `$ install.sh`. If you
-are on a Linux machine with systemd, installer will ask you if you want to run it as a daemon.
+In order to install first you need to build it with `$ cmake -DCMAKE_BUILD_TYPE=Release -B Release .` and then install
+it `$ install.sh`. If you are on a Linux machine with systemd, installer will ask you if you want to run it as a daemon.
 
 ## Prerequisites
 
