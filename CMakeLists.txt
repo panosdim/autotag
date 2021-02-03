@@ -19,11 +19,9 @@ link_directories(${TAG_PARSER_BINARY_DIR})
 # find tagparser
 find_package(tagparser${CONFIGURATION_PACKAGE_SUFFIX} 9.4.0 REQUIRED)
 
-AUX_SOURCE_DIRECTORY(src/AtomicParsley AtomicParsley)
-
 configure_file(${CMAKE_SOURCE_DIR}/config.ini ${CMAKE_BINARY_DIR} COPYONLY)
 
-add_executable(autotag src/main.cpp src/Watch.cpp src/Watch.h src/movie.cpp src/movie.h src/TMDB.cpp src/TMDB.h ${AtomicParsley})
+add_executable(autotag src/main.cpp src/Watch.cpp src/Watch.h src/movie.cpp src/movie.h src/TMDB.cpp src/TMDB.h)
 target_include_directories(autotag PUBLIC ${CMAKE_SOURCE_DIR}/libs/simpleini-4.17)
 target_link_libraries(autotag PRIVATE glog::glog restclient-cpp nlohmann_json::nlohmann_json ${TAG_PARSER_LIB})
 
