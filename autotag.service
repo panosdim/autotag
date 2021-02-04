@@ -1,0 +1,11 @@
+[Unit]
+Description=Script to start autotag
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/autotag
+ExecStart=/opt/autotag/autotag "<PATH>"
+
+[Install]
+WantedBy=multi-user.target
