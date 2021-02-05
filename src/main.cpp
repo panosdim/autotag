@@ -18,7 +18,7 @@ namespace fs = std::filesystem;
 
 #define EVENT_SIZE (sizeof(struct inotify_event))
 #define EVENT_BUF_LEN (1024 * (EVENT_SIZE + NAME_MAX + 1))
-#define WATCH_FLAGS (IN_CREATE | IN_DELETE)
+#define WATCH_FLAGS (IN_CREATE | IN_DELETE | IN_CLOSE)
 
 // Keep going  while run == true, or, in other words, until user hits ctrl-c
 static bool run = true;
@@ -116,7 +116,15 @@ int main(int argc, char *argv[]) {
                         wd = inotify_add_watch(fd, new_dir.c_str(), WATCH_FLAGS);
                         watch.insert(event->wd, event->name, wd);
                         LOG(INFO) << "Watch new directory " << new_dir;
-                    } else {
+                    }
+                } else if (event->mask & IN_DELETE) {
+                    if (event->mask & IN_ISDIR) {
+                        watch.erase(event->wd, event->name, &wd);
+                        inotify_rm_watch(fd, wd);
+                        LOG(INFO) << "Remove watch of deleted directory " << event->name;
+                    }
+                } else if (event->mask & IN_CLOSE) {
+                    if (!(event->mask & IN_ISDIR)) {
                         fs::path new_file(current_dir);
                         new_file /= event->name;
                         Movie movieInfo;
@@ -147,12 +155,6 @@ int main(int argc, char *argv[]) {
                                 }
                             }
                         }
-                    }
-                } else if (event->mask & IN_DELETE) {
-                    if (event->mask & IN_ISDIR) {
-                        watch.erase(event->wd, event->name, &wd);
-                        inotify_rm_watch(fd, wd);
-                        LOG(INFO) << "Remove watch of deleted directory " << event->name;
                     }
                 }
             }

@@ -41,7 +41,7 @@ void finalizeLog() {
 }
 
 bool extract_movie_info(const filesystem::path &movieFile, Movie &movieInfo) {
-    regex movieRegex(R"(([ .\w']+?)\W(\d{4})\W?.*)");
+    regex movieRegex(R"(([ .\w']+)\W(\d{4})\W.*)");
     smatch movieResult;
     if (movieFile.extension() == ".mp4" || movieFile.extension() == ".mkv") {
         string filename = movieFile.filename();
