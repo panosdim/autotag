@@ -30,6 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Build Folders
 /cmake-build-debug-wsl/
 /cmake-build-debug/
 /cmake-build-release/
+
+# config.ini
+config.ini

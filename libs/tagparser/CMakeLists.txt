@@ -12,7 +12,7 @@ set(META_VERSION_MAJOR 9)
 set(META_VERSION_MINOR 4)
 set(META_VERSION_PATCH 0)
 set(META_REQUIRED_CPP_UNIT_VERSION 1.14.0)
-set(META_ADD_DEFAULT_CPP_UNIT_TEST_APPLICATION ON)
+set(META_ADD_DEFAULT_CPP_UNIT_TEST_APPLICATION OFF)
 
 # add project files
 set(HEADER_FILES
@@ -199,8 +199,8 @@ endif ()
 include(BasicConfig)
 include(WindowsResources)
 include(LibraryTarget)
-include(TestTarget)
-include(Doxygen)
+#include(TestTarget)
+#include(Doxygen)
 include(ConfigHeader)
 
 # write languages header from CSV file

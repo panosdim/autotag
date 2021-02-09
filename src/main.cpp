@@ -6,11 +6,13 @@
 #include <unistd.h>
 #include <string>
 #include <filesystem>
-#include <glog/logging.h>
 #include "Watch.h"
 #include "movie.h"
 #include "SimpleIni.h"
 #include "TMDB.h"
+#include "spdlog/spdlog.h"
+#include "spdlog/sinks/basic_file_sink.h"
+#include "spdlog/sinks/stdout_color_sinks.h"
 
 using std::cout;
 using std::endl;
@@ -33,8 +35,18 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    // Initialize Google’s logging library.
-    google::InitGoogleLogging(argv[0]);
+    // Initialize spdlog
+    try {
+        auto console_sink = std::make_shared<spdlog::sinks::stdout_color_sink_mt>();
+        auto file_sink = std::make_shared<spdlog::sinks::basic_file_sink_mt>("autotag.log", false);
+
+        spdlog::logger logger("autotag", {console_sink, file_sink});
+        logger.flush_on(spdlog::level::info);
+        spdlog::set_default_logger(std::make_shared<spdlog::logger>(logger));
+    }
+    catch (const spdlog::spdlog_ex &ex) {
+        std::cout << "Log initialization failed: " << ex.what() << std::endl;
+    }
 
     // Read ini file
     CSimpleIniA ini;
@@ -42,7 +54,7 @@ int main(int argc, char *argv[]) {
 
     SI_Error rc = ini.LoadFile("config.ini");
     if (rc < 0) {
-        LOG(ERROR) << "Can't open config.ini file.";
+        spdlog::error("Can't open config.ini file.");
         return -1;
     }
 
@@ -115,16 +127,17 @@ int main(int argc, char *argv[]) {
                         new_dir = current_dir + "/" + event->name;
                         wd = inotify_add_watch(fd, new_dir.c_str(), WATCH_FLAGS);
                         watch.insert(event->wd, event->name, wd);
-                        LOG(INFO) << "Watch new directory " << new_dir;
+                        spdlog::info("Watch new directory {}", new_dir);
                     }
                 } else if (event->mask & IN_DELETE) {
                     if (event->mask & IN_ISDIR) {
                         watch.erase(event->wd, event->name, &wd);
                         inotify_rm_watch(fd, wd);
-                        LOG(INFO) << "Remove watch of deleted directory " << event->name;
+                        spdlog::info("Remove watch of deleted directory {}", event->name);
                     }
                 } else if (event->mask & IN_CLOSE) {
                     if (!(event->mask & IN_ISDIR)) {
+                        current_dir = watch.get(event->wd);
                         fs::path new_file(current_dir);
                         new_file /= event->name;
                         Movie movieInfo;
@@ -132,13 +145,13 @@ int main(int argc, char *argv[]) {
                         if (extract_movie_info(new_file, movieInfo)) {
                             if (processed_file != new_file) {
                                 processed_file = new_file;
-                                LOG(INFO) << "New movie found in " << movieInfo.path << " with title "
-                                          << movieInfo.title
-                                          << " and released at "
-                                          << movieInfo.releaseYear;
+                                spdlog::info("New movie found in {0} with title {1} and released at {2}",
+                                             movieInfo.path,
+                                             movieInfo.title, movieInfo.releaseYear);
                                 string cover = tmdb.downloadCover(movieInfo);
                                 if (cover.empty()) {
-                                    LOG(ERROR) << "Cover file not found";
+                                    spdlog::error("Cover file not found for movie {} and release year {}",
+                                                  movieInfo.title, movieInfo.releaseYear);
                                 } else {
                                     switch (movieInfo.fileType) {
                                         case MP4:
@@ -150,7 +163,7 @@ int main(int argc, char *argv[]) {
                                     // Delete cover
                                     int status = remove(cover.c_str());
                                     if (status != 0) {
-                                        LOG(ERROR) << "Cover File was not deleted!";
+                                        spdlog::error("Cover file {} was not deleted!", cover);
                                     }
                                 }
                             }

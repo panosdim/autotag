@@ -1,8 +1,9 @@
 #include "TMDB.h"
 #include "restclient-cpp/restclient.h"
 #include <nlohmann/json.hpp>
-#include <glog/logging.h>
 #include <curl/curl.h>
+#include "spdlog/spdlog.h"
+
 
 using json = nlohmann::json;
 
@@ -24,7 +25,7 @@ TMDB::TMDB(const string &token) {
         string secureBaseUrl = response["images"]["secure_base_url"];
         imageBaseUrl = secureBaseUrl + posterSize;
     } else {
-        LOG(ERROR) << "Can't retrieve configuration from TMDB." << r.code;
+        spdlog::error("Can't retrieve configuration from TMDB. Error code: {}", r.code);
     }
 }
 
@@ -36,7 +37,7 @@ string TMDB::downloadCover(const Movie &movieInfo) {
     if (curl) {
         query += curl_easy_escape(curl, movieInfo.title.c_str(), movieInfo.title.length());
     } else {
-        LOG(ERROR) << "Can't initialize cURL";
+        spdlog::error("Can't initialize cURL");
     }
 
     string year = "&year=" + movieInfo.releaseYear;
@@ -49,7 +50,7 @@ string TMDB::downloadCover(const Movie &movieInfo) {
 
             FILE *fp = fopen("/tmp/cover.jpg", "wb");
             if (!fp) {
-                LOG(ERROR) << "Can't open file to save cover image.";
+                spdlog::error("Can't open temp file /tmp/cover.jpg to save cover image.");
             }
 
             curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, NULL);
@@ -59,7 +60,7 @@ string TMDB::downloadCover(const Movie &movieInfo) {
             // Grab image
             res = curl_easy_perform(curl);
             if (res) {
-                LOG(ERROR) << "Cannot grab the image!";
+                spdlog::error("Cannot grab the image with cURL!");
                 // Close the file
                 fclose(fp);
 
@@ -78,10 +79,11 @@ string TMDB::downloadCover(const Movie &movieInfo) {
 
             return "/tmp/cover.jpg";
         } else {
-            LOG(ERROR) << "No movie found in TMDB.";
+            spdlog::warn("No movie found in TMDB with title {} and release year {}.", movieInfo.title,
+                         movieInfo.releaseYear);
         }
     } else {
-        LOG(ERROR) << "Can't search movie in TMDB." << r.code;
+        spdlog::error("Can't connect to TMDB API. Error code: {}", r.code);
     }
 
     // Clean up the resources

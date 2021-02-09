@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="autotag" targetName="ExperimentalConfigure" />
+      <config projectName="autotag" targetName="ContinuousCoverage" />
+      <config projectName="autotag" targetName="NightlyTest" />
+      <config projectName="autotag" targetName="NightlyMemCheck" />
+      <config projectName="autotag" targetName="ContinuousUpdate" />
+      <config projectName="autotag" targetName="ExperimentalStart" />
+      <config projectName="autotag" targetName="BeginMessage" />
+      <config projectName="autotag" targetName="ContinuousMemCheck" />
+      <config projectName="autotag" targetName="ExperimentalBuild" />
+      <config projectName="autotag" targetName="NightlyConfigure" />
+      <config projectName="autotag" targetName="ContinuousBuild" />
+      <config projectName="autotag" targetName="NightlySubmit" />
+      <config projectName="autotag" targetName="ExperimentalTest" />
+      <config projectName="autotag" targetName="install-binary-strip" />
+      <config projectName="autotag" targetName="ExperimentalSubmit" />
+      <config projectName="autotag" targetName="restclient-cpp" />
+      <config projectName="autotag" targetName="install-extra-files" />
+      <config projectName="autotag" targetName="Experimental" />
+      <config projectName="autotag" targetName="ExperimentalMemCheck" />
+      <config projectName="autotag" targetName="install-cmake-templates" />
+      <config projectName="autotag" targetName="install-cmake-config" />
+      <config projectName="autotag" targetName="Nightly" />
+      <config projectName="autotag" targetName="ExperimentalCoverage" />
+      <config projectName="autotag" targetName="autotag" />
+      <config projectName="autotag" targetName="NightlyUpdate" />
+      <config projectName="autotag" targetName="ExperimentalUpdate" />
+      <config projectName="autotag" targetName="install-binary" />
+      <config projectName="autotag" targetName="NightlyBuild" />
+      <config projectName="autotag" targetName="check" />
+      <config projectName="autotag" targetName="NightlyStart" />
+      <config projectName="autotag" targetName="install-cmake-stuff" />
+      <config projectName="autotag" targetName="spdlog" />
+      <config projectName="autotag" targetName="c++utilities" />
+      <config projectName="autotag" targetName="install-header" />
+      <config projectName="autotag" targetName="ContinuousConfigure" />
+      <config projectName="autotag" targetName="install-cmake-modules" />
+      <config projectName="autotag" targetName="ContinuousStart" />
+      <config projectName="autotag" targetName="ContinuousSubmit" />
+      <config projectName="autotag" targetName="NightlyMemoryCheck" />
+      <config projectName="autotag" targetName="install-pkg-config" />
+      <config projectName="autotag" targetName="Continuous" />
+      <config projectName="autotag" targetName="ContinuousTest" />
+      <config projectName="autotag" targetName="NightlyCoverage" />
+      <config projectName="autotag" targetName="tagparser" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4b134a7f-0326-4352-826a-ddd8da9c7297" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/.clang-format" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/.clang-tidy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/INSTALL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/appveyor.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/bench/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/bench/async_bench.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/bench/bench.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/bench/formatter-bench.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/bench/latency.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/bench/utils.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/cmake/ide.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/cmake/pch.h.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/cmake/spdlog.pc.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/cmake/spdlogCPack.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/cmake/spdlogConfig.cmake.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/cmake/utils.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/cmake/version.rc.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/example/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/example/example.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/async.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/async_logger-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/async_logger.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/cfg/argv.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/cfg/env.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/cfg/helpers-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/cfg/helpers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/common-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/common.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/backtracer-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/backtracer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/circular_q.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/console_globals.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/file_helper-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/file_helper.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/fmt_helper.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/log_msg-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/log_msg.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/log_msg_buffer-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/log_msg_buffer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/mpmc_blocking_q.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/null_mutex.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/os-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/os.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/periodic_worker-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/periodic_worker.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/registry-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/registry.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/synchronous_factory.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/tcp_client-windows.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/tcp_client.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/thread_pool-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/thread_pool.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/details/windows_include.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bin_to_hex.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bundled/LICENSE.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bundled/chrono.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bundled/color.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bundled/compile.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bundled/core.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bundled/format-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bundled/format.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bundled/locale.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bundled/os.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bundled/ostream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bundled/posix.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bundled/printf.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/bundled/ranges.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/chrono.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/fmt.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fmt/ostr.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/formatter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/fwd.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/logger-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/logger.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/pattern_formatter-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/pattern_formatter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/android_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/ansicolor_sink-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/ansicolor_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/base_sink-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/base_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/basic_file_sink-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/basic_file_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/daily_file_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/dist_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/dup_filter_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/msvc_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/null_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/ostream_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/ringbuffer_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/rotating_file_sink-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/rotating_file_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/sink-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/stdout_color_sinks-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/stdout_color_sinks.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/stdout_sinks-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/stdout_sinks.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/syslog_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/systemd_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/tcp_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/win_eventlog_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/wincolor_sink-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/sinks/wincolor_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/spdlog-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/spdlog.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/stopwatch.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/tweakme.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/include/spdlog/version.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/logos/jetbrains-variant-4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/scripts/extract_version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/scripts/format.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/src/async.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/src/cfg.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/src/color_sinks.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/src/file_sinks.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/src/fmt.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/src/spdlog.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/src/stdout_sinks.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/catch.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/catch.license" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/includes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_async.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_backtrace.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_cfg.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_create_dir.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_daily_logger.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_dup_filter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_errors.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_eventlog.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_file_helper.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_file_logging.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_fmt_helper.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_macros.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_misc.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_mpmc_q.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_pattern_formatter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_registry.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_sink.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_stdout_api.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_stopwatch.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_systemd.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/test_time_point.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/utils.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/spdlog-1.8.2/tests/utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/c++utilities/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libs/c++utilities/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/c++utilities/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/c++utilities/global.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/.bazelci/presubmit.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/.travis.ubuntu.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/AUTHORS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/BUILD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/CONTRIBUTORS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/COPYING" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/ChangeLog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/Dockerfile.ubuntu.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/INSTALL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/README.windows" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/WORKSPACE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/appveyor.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/autogen.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/bazel/example/BUILD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/bazel/example/main.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/bazel/glog.bzl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/cmake/DetermineGflagsNamespace.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/cmake/INSTALL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/configure.ac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/doc/designstyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/doc/glog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/glog-config.cmake.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/libglog.pc.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/m4/ac_have_attribute.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/m4/ac_have_builtin_expect.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/m4/ac_have_sync_val_compare_and_swap.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/m4/ac_rwlock.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/m4/acx_pthread.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/m4/google_namespace.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/m4/ltsugar.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/m4/lt~obsolete.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/m4/namespaces.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/m4/pc_from_ucontext.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/m4/stl_namespace.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/m4/using_operator.m4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/deb.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/deb/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/deb/changelog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/deb/compat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/deb/control" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/deb/copyright" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/deb/docs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/deb/libgoogle-glog-dev.dirs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/deb/libgoogle-glog-dev.install" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/deb/libgoogle-glog0.dirs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/deb/libgoogle-glog0.install" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/deb/rules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/rpm.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/packages/rpm/rpm.spec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/base/commandlineflags.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/base/googleinit.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/base/mutex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/config.h.cmake.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/config_for_unittests.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/demangle.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/demangle.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/demangle_unittest.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/demangle_unittest.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/demangle_unittest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/glog/log_severity.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/glog/logging.h.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/glog/raw_logging.h.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/glog/stl_logging.h.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/glog/vlog_is_on.h.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/googletest.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/logging.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/logging_striplog_test.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/logging_striptest10.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/logging_striptest2.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/logging_striptest_main.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/logging_unittest.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/logging_unittest.err" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/mock-log.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/mock-log_test.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/raw_logging.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/signalhandler.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/signalhandler_unittest.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/signalhandler_unittest.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/stacktrace.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/stacktrace_generic-inl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/stacktrace_libunwind-inl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/stacktrace_powerpc-inl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/stacktrace_unittest.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/stacktrace_windows-inl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/stacktrace_x86-inl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/stacktrace_x86_64-inl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/stl_logging_unittest.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/symbolize.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/symbolize.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/symbolize_unittest.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/utilities.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/utilities.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/utilities_unittest.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/vlog_is_on.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/windows/glog/log_severity.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/windows/glog/logging.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/windows/glog/raw_logging.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/windows/glog/stl_logging.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/windows/glog/vlog_is_on.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/windows/port.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/windows/port.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/src/windows/preprocess.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/clang-cxx17.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/gcc-cxx11.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/gcc-cxx17.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/gcc-cxx98.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/gcc-gnuxx11.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/linux-mingw-w64-cxx11.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/linux-mingw-w64-cxx17.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/linux-mingw-w64-gnuxx11.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/mingw-cxx11.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/mingw-cxx17.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/mingw-gnuxx11.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/vs-14-2015-sdk-8-1.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/vs-14-2015-win64.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/vs-15-2017-win64-cxx17.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/glog-0.4.0/toolchains/vs-15-2017-win64.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/tagparser/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libs/tagparser/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/tagparser/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/tagparser/global.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TMDB.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/TMDB.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movie.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/movie.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1o0hjzdCEt2unOpttqYtGSHEd5U" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="cf.advertisement.text.has.clang-format" value="true" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
+  </component>
+  <component name="RunManager" selected="CMake Application.autotag">
+    <configuration name="BeginMessage" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="BeginMessage" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Continuous" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="Continuous" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousBuild" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ContinuousBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ContinuousBuild">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousConfigure" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ContinuousConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ContinuousConfigure">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousCoverage" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ContinuousCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ContinuousCoverage">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousMemCheck" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ContinuousMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ContinuousMemCheck">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousStart" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ContinuousStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ContinuousStart">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousSubmit" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ContinuousSubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ContinuousSubmit">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousTest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ContinuousTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ContinuousTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousUpdate" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ContinuousUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ContinuousUpdate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Experimental" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="Experimental" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalBuild" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ExperimentalBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ExperimentalBuild">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalConfigure" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ExperimentalConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ExperimentalConfigure">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalCoverage" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ExperimentalCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ExperimentalCoverage">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalMemCheck" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ExperimentalMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ExperimentalMemCheck">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalStart" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ExperimentalStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ExperimentalStart">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalSubmit" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ExperimentalSubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ExperimentalSubmit">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalTest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ExperimentalTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ExperimentalTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalUpdate" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="ExperimentalUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="ExperimentalUpdate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Nightly" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="Nightly" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyBuild" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="NightlyBuild" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="NightlyBuild">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyConfigure" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="NightlyConfigure" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="NightlyConfigure">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyCoverage" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="NightlyCoverage" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="NightlyCoverage">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyMemCheck" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="NightlyMemCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="NightlyMemCheck">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyMemoryCheck" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="NightlyMemoryCheck" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="NightlyMemoryCheck">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyStart" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="NightlyStart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="NightlyStart">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlySubmit" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="NightlySubmit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="NightlySubmit">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyTest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="NightlyTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="NightlyTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyUpdate" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="NightlyUpdate" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="NightlyUpdate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="autotag" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="/tmp" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="autotag" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autotag" RUN_TARGET_NAME="autotag">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="c++utilities" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="c++utilities" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="check" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="check" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="install-binary-strip" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="install-binary-strip" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="install-binary" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="install-binary" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="install-cmake-config" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="install-cmake-config" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="install-cmake-modules" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="install-cmake-modules" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="install-cmake-stuff" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="install-cmake-stuff" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="install-cmake-templates" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="install-cmake-templates" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="install-extra-files" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="install-extra-files" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="install-header" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="install-header" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="install-pkg-config" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="install-pkg-config" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="restclient-cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="restclient-cpp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="spdlog" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="spdlog" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tagparser" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autotag" TARGET_NAME="tagparser" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.autotag" />
+      <item itemvalue="CMake Application.Continuous" />
+      <item itemvalue="CMake Application.ContinuousBuild" />
+      <item itemvalue="CMake Application.ContinuousConfigure" />
+      <item itemvalue="CMake Application.ContinuousCoverage" />
+      <item itemvalue="CMake Application.ContinuousMemCheck" />
+      <item itemvalue="CMake Application.ContinuousStart" />
+      <item itemvalue="CMake Application.ContinuousSubmit" />
+      <item itemvalue="CMake Application.ContinuousTest" />
+      <item itemvalue="CMake Application.ContinuousUpdate" />
+      <item itemvalue="CMake Application.Experimental" />
+      <item itemvalue="CMake Application.ExperimentalBuild" />
+      <item itemvalue="CMake Application.ExperimentalConfigure" />
+      <item itemvalue="CMake Application.ExperimentalCoverage" />
+      <item itemvalue="CMake Application.ExperimentalMemCheck" />
+      <item itemvalue="CMake Application.ExperimentalStart" />
+      <item itemvalue="CMake Application.ExperimentalSubmit" />
+      <item itemvalue="CMake Application.ExperimentalTest" />
+      <item itemvalue="CMake Application.ExperimentalUpdate" />
+      <item itemvalue="CMake Application.Nightly" />
+      <item itemvalue="CMake Application.NightlyBuild" />
+      <item itemvalue="CMake Application.NightlyConfigure" />
+      <item itemvalue="CMake Application.NightlyCoverage" />
+      <item itemvalue="CMake Application.NightlyMemCheck" />
+      <item itemvalue="CMake Application.NightlyMemoryCheck" />
+      <item itemvalue="CMake Application.NightlyStart" />
+      <item itemvalue="CMake Application.NightlySubmit" />
+      <item itemvalue="CMake Application.NightlyTest" />
+      <item itemvalue="CMake Application.NightlyUpdate" />
+      <item itemvalue="CMake Application.c++utilities" />
+      <item itemvalue="CMake Application.check" />
+      <item itemvalue="CMake Application.install-binary" />
+      <item itemvalue="CMake Application.install-binary-strip" />
+      <item itemvalue="CMake Application.install-cmake-config" />
+      <item itemvalue="CMake Application.install-cmake-modules" />
+      <item itemvalue="CMake Application.install-cmake-stuff" />
+      <item itemvalue="CMake Application.install-cmake-templates" />
+      <item itemvalue="CMake Application.install-extra-files" />
+      <item itemvalue="CMake Application.install-header" />
+      <item itemvalue="CMake Application.install-pkg-config" />
+      <item itemvalue="CMake Application.BeginMessage" />
+      <item itemvalue="CMake Application.restclient-cpp" />
+      <item itemvalue="CMake Application.spdlog" />
+      <item itemvalue="CMake Application.tagparser" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4b134a7f-0326-4352-826a-ddd8da9c7297" name="Default Changelist" comment="" />
+      <created>1612429554909</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612429554909</updated>
+      <workItem from="1612429556589" duration="2106000" />
+      <workItem from="1612449471107" duration="556000" />
+      <workItem from="1612522467291" duration="2481000" />
+      <workItem from="1612780293656" duration="22560000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add installation script.">
+      <created>1612449636298</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612449636298</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update RegEx and Change file after copy is finished.">
+      <created>1612530422698</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612530422698</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Add installation script." />
+    <MESSAGE value="Update RegEx and Change file after copy is finished." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update RegEx and Change file after copy is finished." />
+  </component>
+</project>

@@ -1,6 +1,5 @@
 #include "movie.h"
 #include <regex>
-#include <glog/logging.h>
 #include <cstdio>
 #include <tagparser/mediafileinfo.h>
 #include <tagparser/diagnostics.h>
@@ -8,6 +7,7 @@
 #include <tagparser/abstractattachment.h>
 #include <tagparser/tag.h>
 #include <iostream>
+#include "spdlog/spdlog.h"
 
 bool logLineFinalized = true;
 static string lastStep;
@@ -71,7 +71,7 @@ void save_mp4_cover(const string &cover, const Movie &movieInfo) {
         if (fileInfo.tagsParsingStatus() == ParsingStatus::Ok && container) {
             const auto tags = fileInfo.tags();
             if (tags.empty()) {
-                LOG(ERROR) << " - File has no (supported) tag information.\n";
+                spdlog::error("File has no (supported) tag information.");
             }
             // iterate through all tags
             for (auto *tag : tags) {
@@ -88,12 +88,12 @@ void save_mp4_cover(const string &cover, const Movie &movieInfo) {
                     TagValue value(move(buff), coverFileInfo.size(), TagDataType::Picture);
                     value.setMimeType(coverFileInfo.mimeType());
                     if (tag->setValue(KnownField::Cover, value)) {
-                        LOG(INFO) << "Cover Tag set";
+                        spdlog::info("Tag Cover set in file.");
                     }
                 } catch (const TagParser::Failure &) {
-                    LOG(ERROR) << "Unable to parse specified cover file." << cover;
+                    spdlog::error("Unable to parse specified cover file {}.", cover);
                 } catch (const std::ios_base::failure &) {
-                    LOG(ERROR) << "An IO error occurred when parsing the specified cover file." << cover;
+                    spdlog::error("An IO error occurred when parsing the specified cover file {}.", cover);
                 }
             }
 
@@ -101,16 +101,16 @@ void save_mp4_cover(const string &cover, const Movie &movieInfo) {
             AbortableProgressFeedback progress(logNextStep, logStepPercentage);
 
             // Save changes
-            LOG(INFO) << "Saving changes";
+            spdlog::info("Saving changes to file.");
             fileInfo.applyChanges(diag, progress);
 
             // notify about completion
             finalizeLog();
         }
     } catch (const Failure &error) {
-        LOG(ERROR) << "A parsing failure occurred when reading the file " << movieInfo.path;
-    } catch (const ios_base::failure &) {
-        LOG(ERROR) << "An IO failure occurred when reading the file " << movieInfo.path;
+        spdlog::error("A parsing failure occurred when reading the file {}.", movieInfo.path);
+    } catch (const ios_base::failure &e) {
+        spdlog::error("An IO failure occurred when reading the file {}. Error info: {}", movieInfo.path, e.what());
     }
 }
 
@@ -129,7 +129,7 @@ void save_mkv_cover(const string &cover, const Movie &movieInfo) {
                 auto attachment = container->attachment(i);
                 if (attachment->mimeType() == "image/jpeg") {
                     attachment->setIgnored(true);
-                    LOG(INFO) << "Existing cover found and marked for removal";
+                    spdlog::info("Existing cover found and marked for removal");
                 }
             }
             auto new_attachment = container->createAttachment();
@@ -140,15 +140,15 @@ void save_mkv_cover(const string &cover, const Movie &movieInfo) {
             AbortableProgressFeedback progress(logNextStep, logStepPercentage);
 
             // Save changes
-            LOG(INFO) << "Saving changes";
+            spdlog::info("Saving changes to file.");
             fileInfo.applyChanges(diag, progress);
 
             // notify about completion
             finalizeLog();
         }
     } catch (const Failure &error) {
-        LOG(ERROR) << "A parsing failure occurred when reading the file " << movieInfo.path;
-    } catch (const ios_base::failure &) {
-        LOG(ERROR) << "An IO failure occurred when reading the file " << movieInfo.path;
+        spdlog::error("A parsing failure occurred when reading the file {}.", movieInfo.path);
+    } catch (const ios_base::failure &e) {
+        spdlog::error("An IO failure occurred when reading the file {}. Error info: {}", movieInfo.path, e.what());
     }
 }

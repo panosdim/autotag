@@ -4,10 +4,15 @@ set(CMAKE_CXX_STANDARD 17)
 include(CTest)
 enable_testing()
 
-add_subdirectory(libs/glog-0.4.0)
 add_subdirectory(libs/restclient-cpp-0.5.2)
 set(JSON_BuildTests OFF CACHE INTERNAL "")
 add_subdirectory(libs/json-3.9.1)
+add_subdirectory(libs/spdlog-1.8.2)
+if (NOT TARGET spdlog)
+    # Stand-alone build
+    find_package(spdlog REQUIRED)
+endif ()
+
 
 add_subdirectory(libs/c++utilities c++utilities)
 list(APPEND CMAKE_MODULE_PATH ${CPP_UTILITIES_SOURCE_DIR}/cmake/modules)
@@ -23,7 +28,7 @@ configure_file(${CMAKE_SOURCE_DIR}/config.ini ${CMAKE_BINARY_DIR} COPYONLY)
 
 add_executable(autotag src/main.cpp src/Watch.cpp src/Watch.h src/movie.cpp src/movie.h src/TMDB.cpp src/TMDB.h)
 target_include_directories(autotag PUBLIC ${CMAKE_SOURCE_DIR}/libs/simpleini-4.17)
-target_link_libraries(autotag PRIVATE glog::glog restclient-cpp nlohmann_json::nlohmann_json ${TAG_PARSER_LIB})
+target_link_libraries(autotag PRIVATE spdlog::spdlog restclient-cpp nlohmann_json::nlohmann_json ${TAG_PARSER_LIB})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

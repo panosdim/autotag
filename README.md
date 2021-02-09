@@ -44,7 +44,7 @@ the [TMBD API Key](https://www.themoviedb.org/documentation/api).
 ## Libraries Used
 
 - [tagparser](https://github.com/Martchus/tagparser)
-- [glog](https://github.com/google/glog)
+- [spdlog](https://github.com/gabime/spdlog)
 - [json](https://github.com/nlohmann/json)
 - [restclient-cpp](https://github.com/mrtazz/restclient-cpp)
 - [simpleini](https://github.com/brofield/simpleini)
